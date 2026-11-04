@@ -4,7 +4,7 @@
  "title": "Clip thử",
  "audio": "tests/fixtures/demo.wav",
  "start": "file:///ABS/tests/fixtures/demo.html",
- "host_label": "Chip · trợ lý",
+ "host_label": "Mia · trợ lý",
  "contact_label": "Liên hệ: 0900 000 000",
  "caption_map": [
   [
