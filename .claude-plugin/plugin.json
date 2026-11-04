@@ -1,0 +1,8 @@
+{
+  "name": "web2clip",
+  "version": "1.0.0",
+  "description": "Biến trang web tương tác thành chuỗi clip có giọng dẫn AI (ElevenLabs), hiệu ứng đồng bộ theo lời, bảng duyệt kịch bản và clip tổng.",
+  "author": {"name": "Tmark Tài · MODORO"},
+  "license": "MIT",
+  "skills": ["skills/web2clip","skills/web2clip-setup","skills/web2clip-plan","skills/web2clip-voice","skills/web2clip-record","skills/web2clip-merge"]
+}
