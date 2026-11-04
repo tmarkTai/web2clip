@@ -29,3 +29,11 @@ def test_no_private_phone_anywhere_in_code():
     for f in glob.glob(os.path.join(ROOT,'skills','**','*.*'),recursive=True):
         if f.endswith(('.py','.md','.js','.html','.json')):
             assert "0948" not in open(f,encoding='utf-8',errors='ignore').read(), f
+
+def test_skill_is_generic_no_private_project_words():
+    import glob
+    for f in glob.glob(os.path.join(ROOT,'**','*.*'),recursive=True):
+        if f.endswith(('.py','.md','.js','.html','.json')) and 'test_skill_files' not in f:
+            t=open(f,encoding='utf-8',errors='ignore').read().lower()
+            for w in ["modoro","team sale","chip"]:
+                assert w not in t, (f,w)
