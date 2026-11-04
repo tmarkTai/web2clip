@@ -1,0 +1,83 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>__TITLE__</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F1F6FF;--panel:#FFFFFF;--ink:#222C74;--ink2:#5B6488;--line:#E3E9F7;--ok:#0E8A55;--okbg:#E6F9F0;--wait:#9A6A00;--waitbg:#FFF6DD;--todo:#7A82A8;--todobg:#EEF1F8;--red:#F5333F;--cyan:#11BFEA;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1530;--panel:#182044;--ink:#EEF1FF;--ink2:#A8B1D6;--line:#2A3566;--okbg:#123C2C;--ok:#4ED39A;--waitbg:#3E3214;--wait:#F2C75B;--todobg:#222B55;--todo:#9AA3CC;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1530;--panel:#182044;--ink:#EEF1FF;--ink2:#A8B1D6;--line:#2A3566;--okbg:#123C2C;--ok:#4ED39A;--waitbg:#3E3214;--wait:#F2C75B;--todobg:#222B55;--todo:#9AA3CC;color-scheme:dark}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15.5px/1.55 "Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:18px 18px 40px}
+header{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+header img{width:58px;height:58px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px var(--line)}
+header h1{margin:0;font-size:24px;line-height:1.2}header p{margin:2px 0 0;color:var(--ink2);font-size:14px}
+.prog{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+@media (max-width:760px){.prog{grid-template-columns:1fr 1fr}}
+.pg{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.pg small{display:block;color:var(--ink2);font-weight:600;font-size:12.5px}.pg b{font-size:24px}
+.pg .bar{height:8px;border-radius:999px;background:var(--todobg);margin-top:6px;overflow:hidden}.pg .bar i{display:block;height:100%;background:var(--ok)}
+.grid{display:grid;grid-template-columns:330px 1fr;gap:16px;align-items:start}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+.list{display:flex;flex-direction:column;gap:8px}
+.ci{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px 14px;cursor:pointer;min-height:44px}
+.ci[aria-pressed="true"]{border:2px solid var(--cyan);padding:11px 13px}
+.ci .tt{display:flex;justify-content:space-between;gap:8px;font-weight:800}.ci .tt span{color:var(--ink2);font-weight:600;font-size:13px}
+.steps{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap}
+.st{font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 8px}
+.st.ok{background:var(--okbg);color:var(--ok)}.st.wait{background:var(--waitbg);color:var(--wait)}.st.todo{background:var(--todobg);color:var(--todo)}
+.det{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:16px}
+.det h2{margin:0;font-size:22px}.det .meta{color:var(--ink2);font-size:14px;margin-top:2px}
+.dg{display:grid;grid-template-columns:300px 1fr;gap:16px;margin-top:14px}
+@media (max-width:1000px){.dg{grid-template-columns:1fr}}
+.vbox{background:#0F1B3D;border-radius:16px;padding:8px;text-align:center}
+.vbox video{width:100%;max-width:300px;border-radius:12px;display:block;margin:0 auto}
+.vbox .ph{color:#C8D0E6;font-size:14px;padding:40px 12px;min-height:200px;display:flex;align-items:center;justify-content:center}
+.vbox small{display:block;color:#C8D0E6;font-size:12px;margin-top:6px}
+.tblw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;background:var(--todobg);color:var(--ink);padding:8px 10px;font-size:13px}
+td{border-top:1px solid var(--line);padding:8px 10px;vertical-align:top}
+td:first-child{width:56%}td.fx{color:var(--ink2)}
+.ap{margin-top:14px;display:grid;gap:8px}
+.ap label.ck{display:flex;align-items:center;gap:10px;font-weight:800;min-height:40px}
+.ap input[type=checkbox]{width:22px;height:22px;accent-color:var(--ok)}
+.ap textarea{width:100%;min-height:80px;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;border:0;border-radius:999px;padding:0 18px;font:inherit;font-weight:800;cursor:pointer;background:var(--ink);color:var(--panel)}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:16px}
+#copied{color:var(--ok);font-weight:700;font-size:14px}
+.note{color:var(--ink2);font-size:13px}
+</style></head><body><div class="wrap">
+<header><img src="__MAS__" alt=""><div><h1>__TITLE__</h1><p>__SUB__</p></div></header>
+<div class="prog" id="prog"></div>
+<div class="grid"><nav class="list" id="list" aria-label="Danh sách clip"></nav><section class="det" id="det" aria-live="polite"></section></div>
+<div class="bar2"><button class="btn" id="cp" type="button">Sao chép góp ý để gửi lại</button><span id="copied"></span></div>
+<p class="note">Dấu duyệt và góp ý lưu trên máy của anh. Bấm “Sao chép góp ý” rồi dán vào chat để sửa.</p>
+</div>
+<script>
+const S=__DATA__, VIDS=__VIDS__;
+const STEP={dung:[["Kịch bản","ok"],["Giọng Chip","wait"],["Quay hình","ok"],["Ghép","todo"]],kb:[["Kịch bản","wait"],["Giọng Chip","todo"],["Quay hình","todo"],["Ghép","todo"]],kb0:[["Kịch bản","todo"],["Giọng Chip","todo"],["Quay hình","todo"],["Ghép","todo"]]};
+const ls={get(k){try{return JSON.parse(localStorage.getItem("clipdash:"+k)||"null")}catch(e){return null}},set(k,v){try{localStorage.setItem("clipdash:"+k,JSON.stringify(v))}catch(e){}}};
+let cur=1;
+function prog(){const tot=S.length,cnt=i=>S.filter(c=>c.steps[i]==="ok").length,kb=cnt(0),gio=cnt(1),quay=cnt(2),ghep=cnt(3);
+ const it=[["Kịch bản đã duyệt",kb],["Giọng đọc xong",gio],["Đã quay hình",quay],["Clip hoàn chỉnh",ghep]];
+ document.getElementById("prog").innerHTML=it.map(([l,v])=>`<div class="pg"><small>${l}</small><b>${v}/${tot}</b><div class="bar"><i style="width:${v/tot*100}%"></i></div></div>`).join("");}
+function list(){document.getElementById("list").innerHTML=S.map(c=>{const ok=ls.get("ok"+c.n);const L=["Kịch bản","Giọng đọc","Quay hình","Ghép"];const st=c.steps.map((k,i)=>`<span class="st ${k}">${L[i]}</span>`).join("");return `<button class="ci" type="button" data-n="${c.n}" aria-pressed="${c.n===cur}"><div class="tt">Clip ${c.n} · ${c.t}<span>${c.len}</span></div><div class="steps">${st}</div></button>`}).join("");
+ document.querySelectorAll(".ci").forEach(b=>b.onclick=()=>{cur=+b.dataset.n;render();});}
+function det(){const c=S.find(x=>x.n===cur),ok=ls.get("ok"+c.n)||c.status==="dung",note=ls.get("note"+c.n)||"";
+ const gs={ok:"Giọng Chip đã có",wait:"Giọng Chip: đã tạo / đang chờ ElevenLabs",todo:"Giọng Chip: chưa tạo"}[c.steps[1]];const v=VIDS[c.n]?`<video src="${VIDS[c.n]}" controls playsinline preload="metadata"></video><small>Bản xem nhanh. File gốc gửi trong chat.</small>`:`<div class="ph">Kịch bản đã duyệt. Đang chờ quay hình và làm giọng.</div>`;
+ const head=["Lời Chip đọc","Hiệu ứng trên web"];
+ document.getElementById("det").innerHTML=`<h2>Clip ${c.n} · ${c.t}</h2><div class="meta">${c.len} · Kịch bản: <b>${c.sstat}</b></div>
+ <div class="dg"><div class="vbox">${v}</div><div class="tblw"><table><thead><tr><th>${head[0]}</th><th>${head[1]}</th></tr></thead><tbody>${c.rows.map(r=>`<tr><td>${r[0]}</td><td class="fx">${r[1]}</td></tr>`).join("")}</tbody></table></div></div>
+ <div class="ap"><label class="ck"><input type="checkbox" id="okc" checked disabled> Kịch bản đã duyệt</label>
+ <textarea id="nt" placeholder="Góp ý cho clip ${c.n} (sửa câu nào, đổi hiệu ứng nào)">${note.replace(/</g,"&lt;")}</textarea></div>`;
+ const okc=document.getElementById("okc");okc.onchange=()=>{ls.set("ok"+c.n,okc.checked);list();prog();};
+ const nt=document.getElementById("nt");nt.oninput=()=>ls.set("note"+c.n,nt.value);}
+function render(){list();det();prog();}
+document.getElementById("cp").onclick=async()=>{const lines=S.map(c=>{const ok=ls.get("ok"+c.n)||c.status==="dung",n=(ls.get("note"+c.n)||"").trim();return (ok||n)?`Clip ${c.n} (${c.t}): ${ok?"DUYỆT":"chưa duyệt"}${n?" · Góp ý: "+n:""}`:""}).filter(Boolean);
+ const txt=lines.length?lines.join("\n"):"Chưa có góp ý.";try{await navigator.clipboard.writeText(txt);document.getElementById("copied").textContent="Đã sao chép, dán vào chat.";}catch(e){document.getElementById("copied").textContent=txt;}};
+render();
+</script></body></html>
