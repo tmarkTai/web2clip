@@ -59,7 +59,7 @@ td:first-child{width:56%}td.fx{color:var(--ink2)}
 </div>
 <script>
 const S=__DATA__, VIDS=__VIDS__;
-const STEP={dung:[["Kịch bản","ok"],["Giọng Chip","wait"],["Quay hình","ok"],["Ghép","todo"]],kb:[["Kịch bản","wait"],["Giọng Chip","todo"],["Quay hình","todo"],["Ghép","todo"]],kb0:[["Kịch bản","todo"],["Giọng Chip","todo"],["Quay hình","todo"],["Ghép","todo"]]};
+const STEP={dung:[["Kịch bản","ok"],["Giọng đọc","wait"],["Quay hình","ok"],["Ghép","todo"]],kb:[["Kịch bản","wait"],["Giọng đọc","todo"],["Quay hình","todo"],["Ghép","todo"]],kb0:[["Kịch bản","todo"],["Giọng đọc","todo"],["Quay hình","todo"],["Ghép","todo"]]};
 const ls={get(k){try{return JSON.parse(localStorage.getItem("clipdash:"+k)||"null")}catch(e){return null}},set(k,v){try{localStorage.setItem("clipdash:"+k,JSON.stringify(v))}catch(e){}}};
 let cur=1;
 function prog(){const tot=S.length,cnt=i=>S.filter(c=>c.steps[i]==="ok").length,kb=cnt(0),gio=cnt(1),quay=cnt(2),ghep=cnt(3);
@@ -68,8 +68,8 @@ function prog(){const tot=S.length,cnt=i=>S.filter(c=>c.steps[i]==="ok").length,
 function list(){document.getElementById("list").innerHTML=S.map(c=>{const ok=ls.get("ok"+c.n);const L=["Kịch bản","Giọng đọc","Quay hình","Ghép"];const st=c.steps.map((k,i)=>`<span class="st ${k}">${L[i]}</span>`).join("");return `<button class="ci" type="button" data-n="${c.n}" aria-pressed="${c.n===cur}"><div class="tt">Clip ${c.n} · ${c.t}<span>${c.len}</span></div><div class="steps">${st}</div></button>`}).join("");
  document.querySelectorAll(".ci").forEach(b=>b.onclick=()=>{cur=+b.dataset.n;render();});}
 function det(){const c=S.find(x=>x.n===cur),ok=ls.get("ok"+c.n)||c.status==="dung",note=ls.get("note"+c.n)||"";
- const gs={ok:"Giọng Chip đã có",wait:"Giọng Chip: đã tạo / đang chờ ElevenLabs",todo:"Giọng Chip: chưa tạo"}[c.steps[1]];const v=VIDS[c.n]?`<video src="${VIDS[c.n]}" controls playsinline preload="metadata"></video><small>Bản xem nhanh. File gốc gửi trong chat.</small>`:`<div class="ph">Kịch bản đã duyệt. Đang chờ quay hình và làm giọng.</div>`;
- const head=["Lời Chip đọc","Hiệu ứng trên web"];
+ const gs={ok:"Giọng đọc đã có",wait:"Giọng đọc: đã tạo / đang chờ ElevenLabs",todo:"Giọng đọc: chưa tạo"}[c.steps[1]];const v=VIDS[c.n]?`<video src="${VIDS[c.n]}" controls playsinline preload="metadata"></video><small>Bản xem nhanh. File gốc gửi trong chat.</small>`:`<div class="ph">Kịch bản đã duyệt. Đang chờ quay hình và làm giọng.</div>`;
+ const head=["Lời đọc","Hiệu ứng trên web"];
  document.getElementById("det").innerHTML=`<h2>Clip ${c.n} · ${c.t}</h2><div class="meta">${c.len} · Kịch bản: <b>${c.sstat}</b></div>
  <div class="dg"><div class="vbox">${v}</div><div class="tblw"><table><thead><tr><th>${head[0]}</th><th>${head[1]}</th></tr></thead><tbody>${c.rows.map(r=>`<tr><td>${r[0]}</td><td class="fx">${r[1]}</td></tr>`).join("")}</tbody></table></div></div>
  <div class="ap"><label class="ck"><input type="checkbox" id="okc" checked disabled> Kịch bản đã duyệt</label>
