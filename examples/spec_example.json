@@ -1,0 +1,73 @@
+{
+ "name": "demo",
+ "tag": "PHẦN 1",
+ "title": "Clip thử",
+ "audio": "tests/fixtures/demo.wav",
+ "start": "file:///ABS/tests/fixtures/demo.html",
+ "host_label": "Chip · trợ lý",
+ "contact_label": "Liên hệ: 0900 000 000",
+ "caption_map": [
+  [
+   "mười",
+   "10"
+  ]
+ ],
+ "paras": [
+  {
+   "text": "Xin chào, đây là khối A.",
+   "acts": [
+    [
+     0.1,
+     "untitle"
+    ],
+    [
+     0.2,
+     "hl",
+     "#a"
+    ]
+   ]
+  },
+  {
+   "text": "Kéo thanh lên mười nhé.",
+   "acts": [
+    [
+     0,
+     "slide",
+     "#r",
+     [
+      3,
+      6,
+      10
+     ]
+    ],
+    [
+     0.5,
+     "flash",
+     "#o"
+    ]
+   ]
+  },
+  {
+   "text": "Cuối cùng bấm nút ở khối B.",
+   "acts": [
+    [
+     0,
+     "go",
+     "#s2"
+    ],
+    [
+     0.2,
+     "click",
+     "#btn"
+    ],
+    [
+     0.8,
+     "end",
+     "HẾT",
+     "Clip thử",
+     "Cảm ơn"
+    ]
+   ]
+  }
+ ]
+}
