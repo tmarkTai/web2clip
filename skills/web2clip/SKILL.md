@@ -21,7 +21,7 @@ Chạy `/web2clip` = đi trọn 7 giai đoạn dưới đây theo thứ tự. **
 ## Luật vàng (đúc kết từ dự án thật)
 1. **Duyệt chữ trước, tốn tiền sau:** kịch bản phải được duyệt trước khi tạo giọng (giọng tốn credit).
 2. **Làm thử 1 clip trước** (pilot) để người dùng duyệt giọng + kiểu hiệu ứng, rồi mới làm hàng loạt.
-3. **Giọng là người dẫn chuyện, không đọc lại chữ trên web.** Có tên vai (ví dụ "Chip, trợ lý của anh X"), xưng hô thân thiện, mở bằng câu hỏi/tình huống, kết bằng câu dẫn sang phần sau.
+3. **Giọng là người dẫn chuyện, không đọc lại chữ trên web.** Có tên vai (ví dụ "Mia, trợ lý của <tên bạn>"), xưng hô thân thiện, mở bằng câu hỏi/tình huống, kết bằng câu dẫn sang phần sau.
 4. **Chia chuỗi clip ngắn theo chương (1–2 phút)** rồi mới ghép clip tổng. Không làm 1 clip dài ngay từ đầu.
 5. **Hình phải đi theo lời:** câu nhắc tới phần nào thì phần đó sáng lên đúng lúc. Dùng bộ quay đồng bộ có dấu ẩn (`scripts/w2c/record.py`), không ước lượng bằng tay.
 6. **Hỏi người dùng tối đa 1–3 câu mỗi lần**, có lựa chọn bấm sẵn. Báo thật khi có giới hạn.
