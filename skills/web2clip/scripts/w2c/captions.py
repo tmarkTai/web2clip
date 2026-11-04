@@ -1,9 +1,8 @@
 """Phụ đề: đổi số đọc bằng chữ sang chữ số và chia câu cho dễ đọc."""
 import re
-BASE=[("năm triệu ba trăm mười nghìn","5,31 triệu"),
+BASE=[
 ("một trăm tám mươi sáu","186"),("hai trăm năm mươi","250"),("hai trăm bốn mươi","240"),("năm trăm","500"),("sáu trăm","600"),
 ("bảy mươi hai","72"),("bảy mươi","70"),("một trăm nghìn","100.000"),("một trăm","100"),("ba trăm","300"),
-("một triệu tám","1,8 triệu"),("hai triệu tư","2,4 triệu"),("chín triệu sáu","9,6 triệu"),
 ("năm đến mười phần trăm","5–10%"),("hai mươi lăm","25"),("năm mươi phần trăm","50%"),("hai mươi phần trăm","20%"),("mười lăm phần trăm","15%"),("mười phần trăm","10%"),
 ("sáu mươi","60"),("năm mươi","50"),("bốn mươi","40"),("ba mươi","30"),("hai mươi","20"),("mười sáu","16"),("mười lăm","15"),("mười triệu","10 triệu"),
 ("một tỷ","1 tỷ"),("hai tỷ","2 tỷ"),("tám triệu","8 triệu"),("sáu triệu","6 triệu")]
