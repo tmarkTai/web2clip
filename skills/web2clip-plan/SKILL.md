@@ -14,7 +14,7 @@ Mở trang (Playwright), liệt kê chương/mục, các công cụ tương tác
 3. Giọng: nữ trẻ · nam chắc chắn · người dùng tự thu · không lời.
 
 ## Bước 3 · Người dẫn và giọng văn
-Đặt tên vai (ví dụ "Chip, trợ lý của anh Tài"). Lời đọc theo `../web2clip/references/viet-kich-ban.md`: nói chuyện trực tiếp, câu hỏi, ví dụ con số, không đọc lại chữ trên web.
+Đặt tên vai (ví dụ "Mia, trợ lý của <tên bạn>"). Lời đọc theo `../web2clip/references/viet-kich-ban.md`: nói chuyện trực tiếp, câu hỏi, ví dụ con số, không đọc lại chữ trên web.
 
 ## Bước 4 · Kịch bản 2 cột
 Mỗi clip: bảng `Lời đọc | Hiệu ứng trên web`, mỗi hàng 1 đoạn thoại (1–3 câu). Mở: chào + câu hỏi. Kết: câu dẫn sang phần sau + liên hệ (clip cuối).
