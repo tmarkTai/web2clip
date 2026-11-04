@@ -19,10 +19,10 @@ Hoặc nói tự nhiên: *"làm clip giới thiệu từ trang web này"*, *"d�
 ## Cài đặt
 **Claude Code (plugin):**
 ```bash
-/plugin marketplace add <github-user>/web2clip
+/plugin marketplace add tmarkTai/web2clip
 /plugin install web2clip
 ```
-**Claude Code (thủ công):** chép các thư mục trong `skills/` vào `~/.claude/skills/`.
+**Claude Code (thủ công):** `git clone https://github.com/tmarkTai/web2clip` rồi chép các thư mục trong `skills/` vào `~/.claude/skills/`.
 **Claude.ai / app:** Cài đặt → Khả năng → Skills → tải lên từng thư mục trong `skills/` (nén zip). Bật **Chạy code và tạo file**.
 
 ## Cần chuẩn bị
