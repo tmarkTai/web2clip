@@ -1,7 +1,7 @@
 # Viết lời dẫn thu hút
 
 ## Nguyên tắc
-- **Có vai:** "Chào bạn! Mình là Chip, trợ lý của anh Tài." Clip sau mở "Chip đây!".
+- **Có vai:** "Chào bạn! Mình là Mia, trợ lý của <tên bạn>." Clip sau mở "Mia đây!".
 - **Nói với người xem:** "bạn", câu hỏi tu từ, phản ứng ("Nghe dễ thở hơn bạn nghĩ đúng không?").
 - **Ví dụ bằng con số cụ thể** thay cho mô tả chung.
 - **Màn hình lo chữ và số, giọng lo giải thích.** Không đọc lại tiêu đề, bảng.
