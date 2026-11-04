@@ -2,7 +2,7 @@
 
 Skill cho Claude: biến một trang web (nhất là trang tương tác) thành **chuỗi clip ngắn theo chương + clip tổng**, có **người dẫn AI** (ElevenLabs), **hiệu ứng trên web đi đúng theo lời** (viền sáng, con trỏ bấm, kéo thanh, phụ đề), số liệu đúng 100% vì quay từ trang thật. Kèm **bảng duyệt kịch bản** trên điện thoại.
 
-Đúc kết từ dự án thật: chuỗi 8 clip giới thiệu hệ thống Team Sale MODORO (dọc 9:16, ~9 phút).
+**Ví dụ trang để thử:** https://hethong.9bizmentor.com (chọn bản trình bày tương tác) — một trang web nhiều chương, có thanh kéo, biểu đồ, rất hợp để dựng chuỗi clip.
 
 ## Lệnh
 | Lệnh | Làm gì |
@@ -41,4 +41,4 @@ python -m pytest -q tests
 20 bài kiểm thử: phụ đề, căn thời gian theo khoảng lặng, dấu đồng bộ, kiểm tra kịch bản, bảng duyệt, ghép clip, kiểm tra môi trường và **1 bài quay thử toàn trình** (trang mẫu + giọng giả lập → MP4 1080x1920 có tiếng).
 
 ## Giấy phép
-MIT. Tác giả: Tmark Tài · MODORO.
+MIT. Tác giả: Tmark Tài.
